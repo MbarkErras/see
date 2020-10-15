@@ -1,0 +1,3 @@
+[submodule "libraries/mathematics"]
+	path = libraries/mathematics
+	url = https://github.com/MbarkErras/mathematics.git
