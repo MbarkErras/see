@@ -7,7 +7,7 @@ SOURCES =	see.cpp \
 			Polygon.cpp \
 			Shape.cpp
 
-INCLUDES = includes
+INCLUDES = includes libraries/mathematics/includes
 LIBRARIES = 
 
 BUILD_DIRECTORY = build
@@ -19,7 +19,7 @@ TESTS = tests.cpp
 all: $(NAME)
 
 $(NAME): $(OBJECTS)
-	ar rvs $(NAME) $(OBJECTS)
+	ar rvs $(NAME) $(OBJECTS) libraries/mathematics/mathematics.a
 
 test: 
 	make -C tests

@@ -9,11 +9,11 @@ class Polygon
 {
 public:
     Polygon();
-    bool intersect(Vector ray){};
+    bool intersect(Vector<int> ray);
 
 private:
     size_t sides_count;
-    std::vector<Vector> edges;
+    std::vector<Vector<int>> edges;
 };
 
 #endif

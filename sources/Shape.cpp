@@ -4,4 +4,4 @@ Shape::Shape() {}
 
 void Shape::dissect(size_t n) {}
 
-bool Shape::intersect(Vector ray) {}
+bool Shape::intersect(Vector<int> ray) {}

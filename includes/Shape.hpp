@@ -9,9 +9,9 @@
 class Shape
 {
 public:
-    Shape(){};
+    Shape();
     void dissect(size_t n);
-    bool intersect(Vector ray);
+    bool intersect(Vector<int> ray);
 
 private:
     std::vector<Polygon> polygons;
