@@ -1,26 +1,18 @@
-NAME = see.a
+NAME = pSDL.a
 
 SOURCE_DIRECTORY = sources
-SOURCES =	see.cpp \
-			Renderer.cpp \
-			Camera.cpp \
-			Polygon.cpp \
-			Object.cpp \
-			PixelDrawer.cpp
+SOURCES =	pSDL.cpp
 
-INCLUDES = includes
-LIBRARIES =
+INCLUDES = includes ../../includes
+LIBRARIES = -lSDL2 ../../see.a
 
 BUILD_DIRECTORY = build
 OBJECTS = $(addprefix $(BUILD_DIRECTORY)/, $(SOURCES:.cpp=.o))
 
-TESTS_DIRECTORY = tests
-TESTS = tests.cpp
-
 all: $(NAME)
 
 $(NAME): $(OBJECTS)
-	ar rvs $(NAME) $(OBJECTS) $(LIBRARIES)
+	ar rvs $(NAME) $(OBJECTS)
 
 test: 
 	make -C tests

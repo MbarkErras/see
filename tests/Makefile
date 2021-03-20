@@ -1,30 +1,18 @@
-NAME = see.a
+NAME = a.out
 
-SOURCE_DIRECTORY = sources
-SOURCES =	see.cpp \
-			Renderer.cpp \
-			Camera.cpp \
-			Polygon.cpp \
-			Object.cpp \
-			PixelDrawer.cpp
+SOURCE_DIRECTORY = .
+SOURCES =	main.cpp
 
-INCLUDES = includes
-LIBRARIES =
+INCLUDES = ../includes ../plugins/sdl/includes
+LIBRARIES =  ../see.a ../plugins/sdl/pSDL.a -lSDL2
 
 BUILD_DIRECTORY = build
 OBJECTS = $(addprefix $(BUILD_DIRECTORY)/, $(SOURCES:.cpp=.o))
 
-TESTS_DIRECTORY = tests
-TESTS = tests.cpp
-
 all: $(NAME)
 
 $(NAME): $(OBJECTS)
-	ar rvs $(NAME) $(OBJECTS) $(LIBRARIES)
-
-test: 
-	make -C tests
-	./$(TESTS_DIRECTORY)/tests
+	g++ -o $(NAME) $(OBJECTS) $(LIBRARIES)
 
 $(OBJECTS):  $(BUILD_DIRECTORY)/%.o : $(SOURCE_DIRECTORY)/%.cpp | $(BUILD_DIRECTORY)
 	g++ -c $(addprefix -I, $(INCLUDES)) $< -o $@

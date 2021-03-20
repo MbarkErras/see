@@ -3,6 +3,7 @@
 
 #include "Renderer.hpp"
 #include "Camera.hpp"
-#include "Shape.hpp"
+#include "Object.hpp"
+#include "PixelDrawer.hpp"
 
 #endif

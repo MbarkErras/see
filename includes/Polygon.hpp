@@ -3,17 +3,15 @@
 
 #include <vector>
 
-#include "mathematics.hpp"
-
 class Polygon
 {
 public:
     Polygon();
-    bool intersect(Vector<int> ray);
+    bool intersect(std::vector<int> ray);
 
 private:
     size_t sides_count;
-    std::vector<Vector<int>> edges;
+    std::vector<std::vector<int>> edges;
 };
 
 #endif

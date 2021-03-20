@@ -1,17 +1,17 @@
 #ifndef CAMERA_H
 #define CAMERA_H
 
-#include "mathematics.hpp"
+#include <vector>
 
 class Camera
 {
 public:
-    Camera(Vector<int> position, Vector<int> lookat, Vector<int> normal, double v_fov, double distance, double h_fov);
+    Camera(std::vector<int> position, std::vector<int> lookat, std::vector<int> normal, double v_fov, double distance, double h_fov);
 
 private:
-    Vector<int> postion;
-    Vector<int> lookat;
-    Vector<int> normal;
+    std::vector<int> postion;
+    std::vector<int> lookat;
+    std::vector<int> normal;
     double distance;
     double v_fov;
     double h_fov;

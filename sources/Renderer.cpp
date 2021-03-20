@@ -5,9 +5,9 @@ Renderer::Renderer(Camera *camera)
     cameras.push_back(camera);
 }
 
-void Renderer::add_shape(Shape *shape)
+void Renderer::add_object(Object *object)
 {
-    objects.push_back(shape);
+    objects.push_back(object);
 }
 
 void Renderer::render()
