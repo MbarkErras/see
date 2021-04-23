@@ -18,7 +18,11 @@ int main(int argc, char **argv)
 
     Polygon polygon = Polygon(faces_count, vertices, face_vertices_count_map, face_vertices_order_map);
 
-    Camera camera = Camera({-1, 1, 1}, {1, -1, 1}, {1, 1, -1}, 120, 10, 180);
+    float position[3] = {-1, 1, 1};
+    float lookat[3] = {1, -1, 1};
+    float normal[3] = {1, 1, -1};
+
+    Camera camera = Camera(position, lookat, normal, 120, 10, 180);
 
     int error;
     const char *title = "title";

@@ -26,6 +26,11 @@ void Renderer::render()
                 camera.lookat[1] + camera.normal[1] * y_quotient + camera.cross[1] * x_quotient,
                 camera.lookat[2] + camera.normal[2] * y_quotient + camera.cross[2] * x_quotient,
             };
+
+            for (int i = 0; i < objects.size(); i++)
+            {
+                objects[i]->intersect(ray_direction, camera.position);
+            }
             printf("ray: (%f, %f, %f)\n", ray_direction[0], ray_direction[1], ray_direction[2]);
             pixelDrawer.drawPixel(x, y, __INT32_MAX__);
         }

@@ -1,4 +1,5 @@
 #include "Polygon.hpp"
+#include <limits>
 
 Polygon::Polygon(int _faces_count, std::array<float, 3> *_vertices, int _face_vertices_count_map[], int _face_vertices_order_map[])
 {
@@ -9,8 +10,12 @@ Polygon::Polygon(int _faces_count, std::array<float, 3> *_vertices, int _face_ve
     triangulate();
 }
 
-int Polygon::intersect(float[3], float[3])
+int Polygon::intersect(float ray_direction[3], float ray_origin[3])
 {
+    float distance = std::numeric_limits<float>::max();
+
+    for (int i = 0; i < triangles.size(); i++) {
+    }
 }
 
 void Polygon::triangulate()
