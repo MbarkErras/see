@@ -7,13 +7,21 @@
 class PSDL : public PixelDrawer
 {
 public:
-    PSDL();
-    int start(int w, int h, char *title);
+    PSDL(int , int , const char *&, int &);
+    int start();
     void stop();
+    int getWidth();
+    int getHeight();
+    int drawPixel(int , int , int);
+    void render();
 
 private:
     SDL_Window *window;
-    int error;
+    SDL_Renderer *renderer;
+    int error = 0;
+    uint16_t width;
+    uint16_t height;
+    const char *title;
 };
 
 #endif

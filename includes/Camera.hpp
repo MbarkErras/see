@@ -6,15 +6,16 @@
 class Camera
 {
 public:
-    Camera(std::vector<int> position, std::vector<int> lookat, std::vector<int> normal, double v_fov, double distance, double h_fov);
+    Camera(std::vector<float> position, std::vector<float> lookat, std::vector<float> normal, double v_fov, double distance, double h_fov);
 
-private:
-    std::vector<int> postion;
-    std::vector<int> lookat;
-    std::vector<int> normal;
+    std::vector<float> position;
+    std::vector<float> lookat;
+    std::vector<float> normal;
+    std::vector<float> cross;
     double distance;
     double v_fov;
     double h_fov;
+private:
 };
 
 #endif

@@ -9,15 +9,15 @@
 class Renderer
 {
 public:
-    Renderer(Camera *);
-    void add_object(Object *);
-    void add_camera(Camera *);
+    Renderer(Camera, PixelDrawer &_pixelDrawer);
+    void add_object(Object &);
+    void add_camera(Camera);
     void render();
 
 private:
-    PixelDrawer *drawer;
-    std::vector<Camera *> cameras;
+    std::vector<Camera> cameras;
     std::vector<Object *> objects;
+    PixelDrawer &pixelDrawer;
 };
 
 #endif
