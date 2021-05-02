@@ -15,8 +15,13 @@ int Polygon::intersect(float ray_direction[3], float ray_origin[3])
     float distance = std::numeric_limits<float>::max();
 
     for (int i = 0; i < triangles.size(); i++) {
+
     }
 }
+
+
+// maybe there is no need to triangulate as iterating over triangles can be done without do storing them
+// tho, might be used for another use case.
 
 void Polygon::triangulate()
 {

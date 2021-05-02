@@ -1,0 +1,3 @@
+[submodule "libraries/linear_algebra"]
+	path = libraries/linear_algebra
+	url = git@github.com:m47h3m471c5/l1n34r-4l63br4.git
